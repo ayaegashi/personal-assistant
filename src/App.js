@@ -2,8 +2,7 @@ import React from 'react'
 import './App.css';
 import NewItemForm from './components/newItemForm'
 import ToDoList from './components/toDoList'
-import { Container, InputField, } from './styles'
-import Welcome from './Welcome'
+import { Container, InputField, StyledLink } from './styles'
 
 function App() {
   const [todoList, setTodos] = React.useState([])
@@ -36,7 +35,6 @@ function App() {
 
   return (
     <Container>
-      <Welcome />
       <NewItemForm addTodo={ addTodo }/>
 
       <InputField           
@@ -47,6 +45,8 @@ function App() {
       />
 
       <ToDoList todos={ searchResults } deleteTodo={ deleteTodo } count={ count } />
+      <br/><br/>
+      <StyledLink to="/">Back to Home</StyledLink>
     </Container>
   );
 }

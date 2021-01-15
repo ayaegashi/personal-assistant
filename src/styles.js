@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
     display: flex;
@@ -95,5 +96,37 @@ export const DeleteButton = styled.button`
 
     &:hover {
         background-color: white;
+    }
+`
+
+export const WelcomePage = styled.div `
+    font-size: 1.2em;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const StyledLink = styled(Link) `
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    border: 3px solid orange;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: white;
+        color: orange;
     }
 `
